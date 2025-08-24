@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PixelMap</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Pixel info box -->
+  <div id="pixel-info"></div>
+
+  <!-- Palette toolbar (hidden initially) -->
+  <div id="palette-bar">
+    <input type="color" id="custom-color">
+    <button id="confirm-btn"><i class="fa fa-check"></i> Confirm</button>
+  </div>
+
+  <!-- Paint button always visible -->
+  <button id="paint-btn"><i class="fa fa-paint-brush"></i> Paint</button>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

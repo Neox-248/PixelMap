@@ -1,0 +1,147 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; /* removes scrollbars */
+  background: #111;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Bottom UI container */
+.bottom-ui {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+  z-index: 1001;
+}
+
+/* Paint button */
+.bottom-ui button.paint-btn {
+  background: #335FFF;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.bottom-ui button.paint-btn:hover { background: #5577FF; }
+
+/* Palette bar */
+#palette-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #131315;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 5px;
+  max-width: 90vw;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  pointer-events: auto;
+  display: none; /* hidden initially */
+}
+#palette-bar.active { display: flex; }
+
+/* Palette color blocks */
+.palette-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #444;
+  margin: 5px;
+}
+
+/* Custom color button (gradient) */
+#custom-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  cursor: pointer;
+  margin: 5px;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  padding: 0;
+}
+
+/* Confirm button in palette bar */
+#palette-bar button {
+  background: #335FFF;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+#palette-bar button:hover { background: #5577FF; }
+
+/* Pixel info popup */
+#pixel-info {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #131315;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  z-index: 1003;
+  display: none;
+  font-size: 14px;
+}
+
+/* Top-right buttons */
+.top-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1002;
+}
+.top-buttons button {
+  background: #335FFF;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.top-buttons button:hover { background: #5577FF; }
+
+/* Top-center search bar */
+#top-search {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  border-radius: 12px;
+  padding: 6px 10px;
+  background: #131315;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+  z-index: 1002;
+}
+#top-search::placeholder { color: #ccc; }
