@@ -14,6 +14,7 @@ PixelMap should now be working on your PC.
 V1.1 Confirmed updates:
 - Support for network play
 - Fixed bug not allowing pixel on pixel
+- Fixed pixels not aligning
 - several cool tools to help with your pixel needs
 - dark mode
 - and more
